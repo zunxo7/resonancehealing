@@ -1,0 +1,111 @@
+.booking {
+  position: relative;
+  margin: 0 16px 32px;
+  padding: 64px 28px;
+  border-radius: var(--radius);
+  background: var(--gradient);
+  overflow: hidden;
+  text-align: center;
+}
+
+.booking__bg-blob {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.booking__bg-blob--1 {
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.08);
+  top: -80px;
+  right: -60px;
+}
+
+.booking__bg-blob--2 {
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.06);
+  bottom: -60px;
+  left: -40px;
+}
+
+.booking__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.booking__title {
+  font-family: var(--font-serif);
+  font-size: clamp(26px, 7vw, 38px);
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.15;
+  max-width: 320px;
+}
+
+.booking__sub {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.6;
+  max-width: 340px;
+}
+
+.booking__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.booking__btn-primary {
+  width: 100%;
+  padding: 17px 28px;
+  border-radius: var(--radius);
+  background: #ffffff;
+  color: var(--amethyst);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+
+.booking__btn-primary:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.booking__btn-ghost {
+  width: 100%;
+  padding: 15px 28px;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: background 0.2s;
+}
+
+.booking__btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.booking__trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  justify-content: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+}

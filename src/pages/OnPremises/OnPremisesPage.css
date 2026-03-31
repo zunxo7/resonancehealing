@@ -1,0 +1,112 @@
+.op-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 108px 24px 64px;
+  text-align: center;
+}
+
+@media (max-width: 768px) { .op-hero { padding: 80px 20px 48px; } }
+
+.op-hero__blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(110px);
+  pointer-events: none;
+  z-index: 0;
+}
+.op-hero__blob--1 { width: 500px; height: 500px; background: rgba(91,176,186,0.16); top: -140px; right: -100px; }
+.op-hero__blob--2 { width: 400px; height: 400px; background: rgba(118,97,164,0.13); bottom: -60px; left: -80px; }
+
+.op-hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.op-hero__title {
+  font-size: clamp(30px, 6vw, 48px);
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--text-primary);
+  letter-spacing: -1px;
+}
+
+.op-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.op-breadcrumb a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.op-breadcrumb a:hover { color: var(--teal); }
+
+/* ═══════════════════════ CONTENT ═══════════════════════ */
+.op-content {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.op-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.op-section__title {
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 900;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+.op-section__body {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text-body);
+}
+
+.op-cta {
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+.op-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 56px 0;
+}
+
+.op-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.op-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-body);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+a.op-contact-item:hover { color: var(--teal); }
+
+.op-contact-item__icon { flex-shrink: 0; font-size: 16px; }

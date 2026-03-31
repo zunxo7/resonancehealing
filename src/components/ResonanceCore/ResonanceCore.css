@@ -1,0 +1,30 @@
+.resonance-core {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.resonance-core__svg {
+  width: 220px;
+  height: 220px;
+  filter: drop-shadow(0 8px 32px rgba(91, 176, 186, 0.18))
+          drop-shadow(0 2px 8px rgba(118, 97, 164, 0.12));
+  transition: filter 0.2s;
+}
+
+.resonance-core:active .resonance-core__svg {
+  filter: drop-shadow(0 12px 40px rgba(91, 176, 186, 0.3))
+          drop-shadow(0 4px 16px rgba(118, 97, 164, 0.2));
+}
+
+.resonance-core__label {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}

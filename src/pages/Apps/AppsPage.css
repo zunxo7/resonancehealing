@@ -1,0 +1,236 @@
+/* ═══════════════════════ HERO ═══════════════════════ */
+.apps-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 108px 24px 72px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .apps-hero { padding: 80px 20px 56px; }
+}
+
+.apps-hero__blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(110px);
+  pointer-events: none;
+  z-index: 0;
+}
+.apps-hero__blob--1 {
+  width: 500px; height: 500px;
+  background: rgba(91,176,186,0.16);
+  top: -140px; right: -100px;
+}
+.apps-hero__blob--2 {
+  width: 400px; height: 400px;
+  background: rgba(118,97,164,0.13);
+  bottom: -60px; left: -80px;
+}
+
+.apps-hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.apps-hero__title {
+  font-size: clamp(32px, 6vw, 50px);
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+}
+
+.apps-hero__sub {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  max-width: 480px;
+}
+
+/* ═══════════════════════ CARDS ═══════════════════════ */
+.apps-cards-section {
+  padding: 80px 24px 80px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.apps-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 700px) {
+  .apps-cards { grid-template-columns: 1fr; }
+}
+
+.apps-card {
+  background: var(--white);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: border-color 0.2s, box-shadow 0.25s;
+}
+
+.apps-card--teal:hover   { border-color: var(--teal);      box-shadow: var(--shadow-float); }
+.apps-card--amethyst:hover { border-color: var(--amethyst); box-shadow: var(--shadow-float); }
+
+.apps-card__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.apps-card__icon-wrap {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.apps-card__device-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.apps-card__tagline {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 4px;
+}
+
+.apps-card__name {
+  font-family: var(--font-serif);
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.apps-card__desc {
+  font-size: 14px;
+  color: var(--text-body);
+  line-height: 1.65;
+}
+
+.apps-card__features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  flex: 1;
+}
+
+.apps-card__features li {
+  font-size: 13px;
+  color: var(--text-body);
+  padding-left: 18px;
+  position: relative;
+}
+
+.apps-card__features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* ═══════════════════════ STORE BUTTONS ═══════════════════════ */
+.apps-card__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.apps-store-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 18px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+  cursor: pointer;
+}
+
+.apps-store-btn--android {
+  background: #111;
+  color: #fff;
+}
+.apps-store-btn--android:hover { background: #222; transform: translateY(-1px); }
+
+.apps-store-btn--ios {
+  background: var(--gradient);
+  color: #fff;
+}
+.apps-store-btn--ios:hover { opacity: 0.9; transform: translateY(-1px); }
+
+.apps-store-btn--unavailable {
+  background: var(--surface);
+  color: var(--text-muted);
+  cursor: default;
+  border: 1px solid var(--border);
+}
+
+.apps-store-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.apps-store-btn span {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.apps-store-btn__sub {
+  font-size: 10px;
+  opacity: 0.8;
+  letter-spacing: 0.03em;
+}
+
+.apps-store-btn__name {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.apps-pdf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--amethyst);
+  text-decoration: none;
+  padding: 9px 0;
+  transition: opacity 0.15s;
+}
+.apps-pdf-btn:hover { opacity: 0.75; }

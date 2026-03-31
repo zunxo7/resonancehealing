@@ -1,0 +1,148 @@
+import { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import { ShoppingCart, FilePdf } from 'phosphor-react'
+import { useCart } from '../../context/CartContext'
+import './ProductPage.css'
+
+const images = [
+  '/images/r3.jpg',
+  '/images/r3.jpg',
+]
+
+const recentProducts = [
+  { name: 'Resonance Water', date: 'December 16, 2025', img: '/images/WhatsApp-Image-2026-02-19-at-11.40.16-AM-1.jpeg', to: '/healing-products' },
+  { name: 'Water Healing Device', date: 'December 16, 2025', img: '/images/WhatsApp-Image-2026-02-19-at-11.40.16-AM-1.jpeg', to: '/product/water-healing-device' },
+  { name: 'All in One Unit (AiOU)', date: 'December 16, 2025', img: '/images/r3.jpg', to: '/product/all-in-one-unit-aiou' },
+  { name: 'Radionics Remedy Maker (RRM)', date: 'December 16, 2025', img: '/images/RRM-1.png', to: '/product/radionics-remedy-maker-rrm' },
+  { name: 'Voice Programmed Potentiser (VPP)', date: 'December 16, 2025', img: '/images/VPP-6.png', to: '/product/voice-programmed-potentiser-vpp' },
+]
+
+export default function ProductAiOUPage() {
+  const [activeImg, setActiveImg] = useState(0)
+  const [qty, setQty] = useState(1)
+  const [activeTab, setActiveTab] = useState('description')
+  const { addToCart } = useCart()
+  const navigate = useNavigate()
+
+  return (
+    <div className="app-page">
+      <div className="pp-page">
+        <div className="pp-top">
+          {/* LEFT: Gallery */}
+          <div className="pp-gallery">
+            <div className="pp-gallery__main">
+              <motion.img
+                key={activeImg}
+                src={images[activeImg]}
+                alt="All in One Unit (AiOU)"
+                className="pp-gallery__main-img"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.25 }}
+              />
+            </div>
+            <div className="pp-gallery__thumbs">
+              {images.map((src, i) => (
+                <button
+                  key={i}
+                  className={`pp-gallery__thumb${activeImg === i ? ' pp-gallery__thumb--active' : ''}`}
+                  onClick={() => setActiveImg(i)}
+                  aria-label={`View image ${i + 1}`}
+                >
+                  <img src={src} alt={`AiOU thumbnail ${i + 1}`} className="pp-gallery__thumb-img" loading="lazy" />
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* RIGHT: Info */}
+          <div className="pp-info">
+            <nav className="pp-breadcrumb">
+              <Link to="/">Home</Link>
+              <span className="pp-breadcrumb__sep">/</span>
+              <Link to="/healing-products">Devices</Link>
+              <span className="pp-breadcrumb__sep">/</span>
+              <span>All in One Unit (AiOU)</span>
+            </nav>
+
+            <h1 className="pp-info__name">All in One Unit (AiOU)</h1>
+
+            <p className="pp-info__short-desc">
+              A compact resonance device that makes, copies, and broadcasts remedies. Combines frequency broadcasting, remedy creation, and energetic signature transfer in one unit.
+            </p>
+
+            <p className="pp-info__price">Rs. 2,25,000.00</p>
+
+            <div className="pp-qty-row">
+              <input
+                type="number"
+                className="pp-qty-input"
+                min={1}
+                value={qty}
+                onChange={(e) => setQty(Math.max(1, parseInt(e.target.value) || 1))}
+              />
+              <button
+                className="pp-add-cart"
+                onClick={() => { addToCart({ id: 'AiOU', name: 'All in One Unit (AiOU)', abbr: 'AiOU', img: images[0], price_pkr: 225000, price_usd: 803.51 }, qty); navigate('/cart') }}
+              >
+                <ShoppingCart size={18} weight="bold" />
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom: Tabs + Recent Products */}
+      <div className="pp-bottom">
+        {/* LEFT: Tabs */}
+        <div className="pp-tabs">
+          <div className="pp-tabs__bar">
+            <button
+              className={`pp-tab-btn${activeTab === 'description' ? ' pp-tab-btn--active' : ''}`}
+              onClick={() => setActiveTab('description')}
+            >
+              Description
+            </button>
+            <button
+              className={`pp-tab-btn${activeTab === 'reviews' ? ' pp-tab-btn--active' : ''}`}
+              onClick={() => setActiveTab('reviews')}
+            >
+              Reviews (0)
+            </button>
+          </div>
+          <div className="pp-tab-content">
+            {activeTab === 'description' && (
+              <>
+                <p>The All in One Unit (AiOU) is a versatile resonance healing device that integrates multiple functions into a single compact unit.</p>
+                <p>It enables frequency broadcasting, remedy creation from computer input, and energetic signature transfer — all without needing separate hardware.</p>
+                <p>Heal with Words, Treat with Voice. Ideal for practitioners who need a comprehensive, all-in-one solution.</p>
+              </>
+            )}
+            {activeTab === 'reviews' && (
+              <p>No reviews yet. Be the first to review this product.</p>
+            )}
+          </div>
+        </div>
+
+        {/* RIGHT: Recent Products */}
+        <aside className="pp-recent">
+          <h3 className="pp-recent__title">Recent Products</h3>
+          <div className="pp-recent__divider" />
+          <div className="pp-recent__list">
+            {recentProducts.map((p) => (
+              <Link key={p.name} to={p.to} className="pp-recent__item">
+                <img src={p.img} alt={p.name} className="pp-recent__item-img" loading="lazy" />
+                <div className="pp-recent__item-info">
+                  <span className="pp-recent__item-name">{p.name}</span>
+                  <span className="pp-recent__item-date">{p.date}</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </aside>
+      </div>
+    </div>
+  )
+}

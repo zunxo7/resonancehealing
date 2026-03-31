@@ -1,0 +1,120 @@
+.certs-page__grid-section {
+  padding: 64px 24px 80px;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.certs-page__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media (max-width: 860px) { .certs-page__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .certs-page__grid { grid-template-columns: 1fr; } }
+
+.certs-page__card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.certs-page__card:hover {
+  box-shadow: var(--shadow-float);
+  transform: translateY(-4px);
+}
+
+.certs-page__img-wrap {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: var(--surface);
+}
+.certs-page__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+.certs-page__card:hover .certs-page__img { transform: scale(1.03); }
+
+.certs-page__card-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 18px 20px;
+}
+
+.certs-page__medal {
+  color: var(--amethyst);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.certs-page__title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.certs-page__issuer {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* badges section */
+.certs-page__badges-section {
+  background: var(--surface);
+  padding: 64px 24px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.certs-page__badges-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.certs-page__badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 900px;
+  width: 100%;
+}
+
+.certs-page__badge {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 20px 28px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+  flex: 1;
+  min-width: 200px;
+  max-width: 280px;
+}
+.certs-page__badge:hover {
+  box-shadow: var(--shadow-float);
+  transform: translateY(-3px);
+}
+
+.certs-page__badge-img {
+  max-height: 56px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
