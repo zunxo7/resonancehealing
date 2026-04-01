@@ -24,6 +24,31 @@ function Label({ children }) {
   return <span className="hp-label">{children}</span>
 }
 
+const heroWords = ['Vibrant Life', 'Healthier Life']
+
+function CyclingWord() {
+  const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+    const t = setInterval(() => setIndex(i => (i + 1) % heroWords.length), 2800)
+    return () => clearInterval(t)
+  }, [])
+
+  return (
+    <span className="hp-hero__cycling-wrap">
+      <motion.span
+        className="hp-hero__cycling-inner"
+        animate={{ y: `-${index * 1.08}em` }}
+        transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
+      >
+        {heroWords.map(word => (
+          <span key={word} className="hp-grad hp-hero__cycling-word">{word}</span>
+        ))}
+      </motion.span>
+    </span>
+  )
+}
+
 /* ── HERO ── */
 function Hero() {
   const { open: openServices } = useServicesModal()
@@ -39,7 +64,7 @@ function Hero() {
         <motion.h1 className="hp-hero__title"
           initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.35 }}>
-          Precision Healing<br />for a <span className="hp-grad">Vibrant Life</span>
+          Precision Healing<br />for a <CyclingWord />
         </motion.h1>
         <motion.p className="hp-hero__sub"
           initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}

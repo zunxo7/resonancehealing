@@ -64,7 +64,7 @@
 }
 
 .bk-embed-wrap {
-  padding: 0 24px 80px;
+  padding: 48px 24px 80px;
 }
 
 .bk-embed-container {
@@ -73,7 +73,7 @@
 }
 
 @media (max-width: 768px) {
-  .bk-embed-wrap { padding: 0 16px 60px; }
+  .bk-embed-wrap { padding: 36px 16px 60px; }
 }
 
 /* ═══════════ CAL WIDGET ═══════════ */
@@ -153,6 +153,7 @@
   flex: 1;
   padding: 28px 24px;
   min-width: 0;
+  background: linear-gradient(160deg, #1e3040 0%, #2b1d42 100%);
 }
 
 .cal-center__nav {
@@ -226,6 +227,7 @@
   border-left: 1px solid rgba(255,255,255,0.08);
   display: flex;
   flex-direction: column;
+  background: linear-gradient(160deg, #1e3040 0%, #2b1d42 100%);
 }
 
 @media (max-width: 768px) {

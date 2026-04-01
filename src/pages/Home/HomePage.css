@@ -125,7 +125,7 @@
   align-items: center;
   text-align: center;
   gap: 24px;
-  max-width: 500px;
+  max-width: 700px;
   width: 100%;
 }
 
@@ -161,6 +161,27 @@
   line-height: 1.08;
   letter-spacing: -1.5px;
   color: var(--text-primary);
+}
+
+.hp-hero__cycling-wrap {
+  display: inline-flex;
+  overflow: hidden;
+  vertical-align: bottom;
+  height: 1.08em;
+}
+
+.hp-hero__cycling-inner {
+  display: flex;
+  flex-direction: column;
+  will-change: transform;
+}
+
+.hp-hero__cycling-word {
+  display: block;
+  white-space: nowrap;
+  height: 1.08em;
+  line-height: 1.08;
+  flex-shrink: 0;
 }
 
 .hp-hero__sub {
