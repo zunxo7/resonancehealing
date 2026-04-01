@@ -25,7 +25,7 @@ const pillars = [
   { icon: Drop,         title: 'Spring Water Remedies',   desc: 'Harnessing the pristine energetic qualities of natural spring water for holistic healing.' },
   { icon: User,         title: 'Personalized Treatment',  desc: 'Each remedy is tailored to your unique biofield and energetic profile for optimal results.' },
   { icon: Leaf,         title: 'Natural Approach',        desc: 'No pills, injections, or invasive procedures. Pure resonance healing from nature.' },
-  { icon: CheckCircle,  title: 'Safe & Effective',        desc: 'Thousands of satisfied patients worldwide with no side effects.' },
+  { icon: CheckCircle,  title: 'Safe & Effective',        desc: 'Many satisfied clients with no reported adverse effects from our natural approach.' },
 ]
 
 const certs = [

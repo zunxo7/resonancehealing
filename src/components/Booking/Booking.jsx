@@ -69,7 +69,7 @@ export default function Booking() {
         >
           <span>✦ No commitment required</span>
           <span>✦ Cancel anytime</span>
-          <span>✦ Satisfaction guaranteed</span>
+          <span>✦ Personalised to your needs</span>
         </motion.div>
       </div>
     </section>

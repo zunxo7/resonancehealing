@@ -78,7 +78,8 @@ export default function CartPage() {
               </div>
             ) : (
               <>
-                <div className="cart-table-wrap">
+                {/* Desktop table */}
+                <div className="cart-table-wrap cart-table-wrap--desktop">
                   <table className="cart-table">
                     <thead>
                       <tr>
@@ -130,6 +131,47 @@ export default function CartPage() {
                     </tbody>
                   </table>
                 </div>
+
+                {/* Mobile cards */}
+                <div className="cart-cards">
+                  {items.map((item) => {
+                    const price = currency === 'USD' ? item.price_usd : item.price_pkr
+                    return (
+                      <div key={item.id} className="cart-card">
+                        <div className="cart-card__top">
+                          <img src={item.img} alt={item.name} className="cart-product-img" />
+                          <div className="cart-card__info">
+                            <span className="cart-product-name">{item.name}</span>
+                            <span className="cart-product-abbr">{item.abbr}</span>
+                            <span className="cart-card__price">{formatPrice(price, currency)}</span>
+                          </div>
+                          <button
+                            className="cart-remove-btn"
+                            onClick={() => removeFromCart(item.id)}
+                            aria-label="Remove item">
+                            ✕
+                          </button>
+                        </div>
+                        <div className="cart-card__bottom">
+                          <div className="cart-card__qty-wrap">
+                            <span className="cart-card__label">Qty</span>
+                            <input
+                              type="number"
+                              min={1}
+                              value={item.qty}
+                              onChange={(e) => updateQty(item.id, parseInt(e.target.value, 10))}
+                              className="cart-qty-input"
+                            />
+                          </div>
+                          <div className="cart-card__subtotal">
+                            <span className="cart-card__label">Subtotal</span>
+                            <span className="cart-td--subtotal">{formatPrice(price * item.qty, currency)}</span>
+                          </div>
+                        </div>
+                      </div>
+                    )
+                  })}
+                </div>
               </>
             )}
           </div>
@@ -144,8 +186,8 @@ export default function CartPage() {
               <div className="cart-totals-row cart-totals-row--shipping">
                 <span className="cart-totals-label">Shipping</span>
                 <div className="cart-totals-shipping">
-                  <span className="cart-totals-free">Free shipping</span>
-                  <span className="cart-totals-shipping-note">Shipping to Pakistan.</span>
+                  <span className="cart-totals-free">Arranged on order</span>
+                  <span className="cart-totals-shipping-note">Confirmed after checkout.</span>
                 </div>
               </div>
               <div className="cart-totals-divider" />

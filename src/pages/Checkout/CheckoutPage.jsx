@@ -204,7 +204,7 @@ export default function CheckoutPage() {
 
               <div className="co-order-row">
                 <span className="co-order-meta-label">Shipping</span>
-                <span className="co-order-meta-value co-order-free">Free shipping</span>
+                <span className="co-order-meta-value co-order-free">Arranged on order</span>
               </div>
 
               <div className="co-order-divider" />

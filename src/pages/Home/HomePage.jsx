@@ -69,7 +69,7 @@ function Hero() {
         <motion.p className="hp-hero__sub"
           initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}>
-          Revolutionizing wellness through natural resonance healing. Balance the unbalances, leading to a cure without pills, injections, or invasive procedures.
+          Natural resonance healing that works with your body's own energy. No pills, injections, or invasive procedures — just a gentle, holistic approach to balance.
         </motion.p>
         <motion.div className="hp-hero__actions"
           initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
@@ -107,7 +107,7 @@ function About() {
           { icon: Drop, title: 'Spring Water Remedies', desc: 'Harnessing the pristine energetic qualities of natural spring water for holistic healing.' },
           { icon: User, title: 'Personalized Treatment', desc: "Each remedy is tailored to your unique biofield and energetic profile for optimal results." },
           { icon: Leaf, title: 'Natural Approach', desc: 'No pills, injections, or invasive procedures. Pure resonance healing from nature.' },
-          { icon: CheckCircle, title: 'Safe & Effective', desc: 'Thousands of satisfied patients worldwide with no side effects.' },
+          { icon: CheckCircle, title: 'Safe & Effective', desc: 'Many satisfied clients with no reported adverse effects from our natural approach.' },
         ].map((p, i) => {
           const IconComponent = p.icon
           return (
