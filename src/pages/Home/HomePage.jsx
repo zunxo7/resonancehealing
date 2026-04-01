@@ -150,7 +150,7 @@ function Process() {
         <motion.p className="hp-section-sub"
           initial={{ opacity: 0, y: 16 }} animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.2 }}>
-          A revolutionary approach to healing that works with your body's natural energy systems, not against them.
+          A natural approach that works with your body's own energy systems, not against them.
         </motion.p>
       </div>
       <div className="hp-process__steps">

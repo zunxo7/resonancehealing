@@ -72,7 +72,7 @@ export default function ProductWHDPage() {
             <h1 className="pp-info__name">Water Healing Device</h1>
 
             <p className="pp-info__short-desc">
-              Enhances water quality using gentle energy alignment technology for balanced, revitalized hydration. No chemicals, no invasive procedures — just pure resonance.
+              Uses resonance frequency imprinting technology to prepare water-based remedies. No chemicals, no invasive procedures — purely informational in nature.
             </p>
 
             <p className="pp-info__price">Rs. 1,14,000 – Rs. 2,33,000</p>
@@ -133,9 +133,9 @@ export default function ProductWHDPage() {
           <div className="pp-tab-content">
             {activeTab === 'description' && (
               <>
-                <p>The Water Healing Device energizes and revitalizes drinking water using resonance energy alignment technology.</p>
-                <p>It works without chemicals, filters, or any pharmaceutical components — purely through informational frequency imprinting.</p>
-                <p>Supports well-being by providing revitalized hydration that works in harmony with the body's natural energy systems.</p>
+                <p>The Water Healing Device prepares water-based remedies using resonance frequency imprinting technology.</p>
+                <p>It works without chemicals, filters, or any pharmaceutical components — purely through informational imprinting.</p>
+                <p>Intended for use as a resonance remedy device in support of a natural, non-invasive approach to wellbeing.</p>
               </>
             )}
             {activeTab === 'reviews' && (

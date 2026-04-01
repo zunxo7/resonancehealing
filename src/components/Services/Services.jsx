@@ -16,7 +16,7 @@ const services = [
       </svg>
     ),
     title: 'Sound Bath',
-    desc: 'Tibetan bowls and crystal frequencies that recalibrate your nervous system at 432 Hz.',
+    desc: 'Tibetan bowls and resonant frequencies used in a calming sound environment to support relaxation.',
     duration: '60 min',
     color: 'teal',
   },
@@ -33,7 +33,7 @@ const services = [
       </svg>
     ),
     title: 'Energy Alignment',
-    desc: 'Chakra balancing and aura cleansing sessions that clear energetic blockages from your field.',
+    desc: 'Personalised sessions focused on identifying and supporting underlying energetic imbalance patterns.',
     duration: '75 min',
     color: 'amethyst',
   },
@@ -51,7 +51,7 @@ const services = [
       </svg>
     ),
     title: 'Breathwork',
-    desc: 'Guided holotropic breathwork to access deeper states and release stored trauma.',
+    desc: 'Guided breathing sessions designed to promote relaxation and support natural self-regulation.',
     duration: '90 min',
     color: 'teal',
   },
@@ -68,7 +68,7 @@ const services = [
       </svg>
     ),
     title: 'Reiki Flow',
-    desc: 'Hands-on and distance Reiki sessions channeling universal life force for deep restoration.',
+    desc: 'Hands-on and distance Reiki sessions intended to support relaxation and energetic balance.',
     duration: '60 min',
     color: 'amethyst',
   },

@@ -56,7 +56,7 @@ export default function AboutPage() {
           <motion.p className="about-hero__sub"
             initial={{ opacity: 0, y: 16 }} animate={headerInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2 }}>
-            Resonance healing with spring water remedies — combining ancient wisdom with modern understanding of biofield science to support your body's natural self-regulation.
+            Resonance healing with spring water remedies — combining traditional knowledge with a modern understanding of energetic balance to support your body's natural self-regulation.
           </motion.p>
         </div>
       </section>
@@ -102,10 +102,10 @@ export default function AboutPage() {
           </p>
           <div className="about-mission__stats">
             {[
-              { val: '10+', label: 'Years Experience' },
-              { val: '5,000+', label: 'Happy Patients' },
-              { val: '50+', label: 'Countries Reached' },
+              { val: '2019', label: 'Established' },
               { val: '3', label: 'IPHM Certifications' },
+              { val: 'Virtual', label: '& In-Person' },
+              { val: 'PK &', label: 'Global Delivery' },
             ].map((s) => (
               <div key={s.label} className="about-stat">
                 <span className="about-stat__val">{s.val}</span>

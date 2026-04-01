@@ -81,9 +81,9 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1 }}
         >
           {[
-            { val: '4,200+', label: 'Sessions' },
-            { val: '98%', label: 'Harmony Rate' },
-            { val: '12', label: 'Modalities' },
+            { val: '2019', label: 'Established' },
+            { val: '3', label: 'IPHM Certifications' },
+            { val: 'Virtual', label: '& In-Person' },
           ].map((s) => (
             <div key={s.label} className="hero__stat">
               <span className="hero__stat-val">{s.val}</span>
