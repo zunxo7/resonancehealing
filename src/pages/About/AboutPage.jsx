@@ -51,7 +51,7 @@ export default function AboutPage() {
           <motion.h1 className="about-hero__title"
             initial={{ opacity: 0, y: 24 }} animate={headerInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.1 }}>
-            Balance the Unbalances,<br /><em className="hp-grad">Leading to a Cure</em>
+            Balance the Unbalances,<br /><em className="hp-grad">Restoring Natural Harmony</em>
           </motion.h1>
           <motion.p className="about-hero__sub"
             initial={{ opacity: 0, y: 16 }} animate={headerInView ? { opacity: 1, y: 0 } : {}}

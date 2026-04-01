@@ -17,7 +17,7 @@ export default function Footer() {
           <Link to="/">
             <img src="/Logo.png" alt="Resonance Healing" className="footer__logo" />
           </Link>
-          <p className="footer__tagline">Balance the Unbalances, Leading to a Cure.</p>
+          <p className="footer__tagline">Balance the Unbalances, Restoring Natural Harmony.</p>
           <address className="footer__contact">
             <span>📍 Fatima Arcade First Floor (Above MCB Bank), Business Bay Phase 7 Bahria Town, Rawalpindi</span>
             <a href="tel:+923119685122">📞 +92 311 9685122</a>

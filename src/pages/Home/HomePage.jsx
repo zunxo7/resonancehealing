@@ -90,7 +90,7 @@ function About() {
     <section className="hp-about">
       <FadeUp className="hp-about__text">
         <Label>About Resonance Healing</Label>
-        <h2 className="hp-section-title">Balance the Unbalances,<br /><em>Leading to a Cure</em></h2>
+        <h2 className="hp-section-title">Balance the Unbalances,<br /><em>Restoring Natural Harmony</em></h2>
         <p>Resonance healing with spring water remedies is rooted in the understanding that water possesses an innate ability to retain and transmit energetic information. Our approach combines ancient wisdom with modern understanding of biofield science.</p>
         <p style={{ marginTop: 12 }}>Book an appointment for a personal visit or consult virtually — no need to physically visit us. Our consultation services are tailored to individuals in Pakistan and those across borders.</p>
         <blockquote className="hp-about__quote">
